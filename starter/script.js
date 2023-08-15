@@ -54,7 +54,9 @@ console.log(document.querySelector(".guess").value);
 //? Event Listener:
 //* Reacting to a certain event after its completion.
 
-document.querySelector(".check").addEventListener("click", function () {});
+document.querySelector(".check").addEventListener("click", function () {
+  console.log(document.querySelector(".guess").value);
+});
 
 //? .addEventListener():
 //* .addEventListener() is a method which will be called whenever an event is received.
@@ -62,8 +64,8 @@ document.querySelector(".check").addEventListener("click", function () {});
 //? Inside .addEventListener(),
 //* -> There are 2 arguments that needs to passed,
 //* 1) Name/Type (Event Name) of the Event.
-//* 2) The function (Event Handler) performing the task related to that Name/Type.
+//* 2) The function (Event Handler) performing the task related to that Name/Type of the Event.
 // (What reaction that eventListener should do on clicking this event).
 
 //? Syntax:
-// .addeventListener("EventName", "EventHandler")
+// .addeventListener("EventName", "EventHandler" (Anonymous function))
