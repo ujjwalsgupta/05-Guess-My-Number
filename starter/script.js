@@ -7,7 +7,9 @@
 //* It allows JavaScript to access HTML elements and STYLES to Manipulate them.
 //* It is a connection between JavaScript & HTML.
 
-// --------------------------
+// --------------------------------------------------------------------
+
+//todo: Selecting and Manipulating Elements
 
 //! Selecting the textContent inside the Class "message":
 
@@ -41,3 +43,22 @@ console.log(document.querySelector(".guess").value);
 
 //? .value:
 //* .value property is used to Assign as well as Read the value from the input field.
+
+// --------------------------------------------------------------------
+
+//todo: Handling Click Events
+
+//? Event:
+//* An event is something which happens on the web page, e.g., mouse click, key press, moving mouse, etc.
+
+//? Event Listener:
+//* Reacting to a certain event after its completion.
+
+document.querySelector(".check").addEventListener("click", function () {});
+
+//? .addEventListener():
+//* .addEventListener() is a method which will be called whenever an event is received.
+
+//? Inside .addEventListener(),
+//* -> There are 2 arguments that needs to passed,
+//* 1) Name/Type of the Event
