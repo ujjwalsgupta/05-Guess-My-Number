@@ -61,5 +61,9 @@ document.querySelector(".check").addEventListener("click", function () {});
 
 //? Inside .addEventListener(),
 //* -> There are 2 arguments that needs to passed,
-//* 1) Name/Type of the Event.
-//* 2) The function performing the task related to that Name/Type. What reaction that eventListener should do on clicking this event.
+//* 1) Name/Type (Event Name) of the Event.
+//* 2) The function (Event Handler) performing the task related to that Name/Type.
+// (What reaction that eventListener should do on clicking this event).
+
+//? Syntax:
+// .addeventListener("EventName", "EventHandler")
