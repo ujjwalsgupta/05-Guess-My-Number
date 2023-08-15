@@ -28,3 +28,6 @@ console.log(document.querySelector(".message").textContent);
 //! Assigning a new value to the .textContent inside of the Class "message":
 
 document.querySelector(".message").textContent = "🎉 Correct Number!";
+
+document.querySelector(".number") = 20;
+document.querySelector(".score") = 20;
