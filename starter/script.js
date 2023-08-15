@@ -29,16 +29,16 @@ console.log(document.querySelector(".message").textContent);
 
 //! Assigning a new value to the .textContent inside of the Class "message":
 
-// document.querySelector(".message").textContent = "🎉 Correct Number!";
+document.querySelector(".message").textContent = "🎉 Correct Number!";
 
-// document.querySelector(".number").textContent = 13;
-// document.querySelector(".score").textContent = 20;
+document.querySelector(".number").textContent = 13;
+document.querySelector(".score").textContent = 20;
 
 //! Assigning the value to the input field:
-// document.querySelector(".guess").value = 12;
+document.querySelector(".guess").value = 12;
 
 //! Reading the value from the input field:
-// console.log(document.querySelector(".guess").value);
+console.log(document.querySelector(".guess").value);
 // Output: 12
 
 //? .value:
@@ -66,7 +66,7 @@ document.querySelector(".check").addEventListener("click", function () {
 //* -> There are 2 arguments that needs to passed,
 //* 1) Name/Type (Event Name) of the Event.
 //* 2) The function (Event Handler) performing the task related to that Name/Type of the Event.
-// (What reaction that eventListener should do on clicking this event).
+// (What reaction that eventListener should do on clicking this event is done by this anonymous function).
 
 //? Syntax:
 // .addeventListener("EventName", "EventHandler" (Anonymous function))
