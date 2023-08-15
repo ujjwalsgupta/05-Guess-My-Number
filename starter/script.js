@@ -2,7 +2,10 @@
 
 //todo: What's the DOM and DOM Manipulation
 
-document.querySelector(".message").textContent;
+//? Selecting the textContent inside the Class .message:
+
+console.log(document.querySelector(".message").textContent);
+// Output: Start guessing...
 
 //? Document Object Model (DOM):
 //* It is a Structured Representation of HTML Documents.
@@ -18,4 +21,4 @@ document.querySelector(".message").textContent;
 //* If no matches are found, null is returned.
 
 //? .textContent():
-//* .textContent is used to select the text inside a selected element.
+//* .textContent is used to select all the text inside a selected element.
