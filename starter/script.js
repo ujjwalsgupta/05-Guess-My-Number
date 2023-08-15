@@ -69,3 +69,6 @@ document.querySelector(".check").addEventListener("click", function () {
 
 //? Syntax:
 // .addeventListener("EventName", "EventHandler" (Anonymous function))
+
+//! NOTE: There is no need to call the Anonymous function inside the .addEventListener(), JS calls that function as soon as the event happens.
+//! i.e., in this case, it is the click of the button.
