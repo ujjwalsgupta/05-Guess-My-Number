@@ -29,16 +29,16 @@ console.log(document.querySelector(".message").textContent);
 
 //! Assigning a new value to the .textContent inside of the Class "message":
 
-document.querySelector(".message").textContent = "🎉 Correct Number!";
+// document.querySelector(".message").textContent = "🎉 Correct Number!";
 
-document.querySelector(".number").textContent = 13;
-document.querySelector(".score").textContent = 20;
+// document.querySelector(".number").textContent = 13;
+// document.querySelector(".score").textContent = 20;
 
 //! Assigning the value to the input field:
-document.querySelector(".guess").value = 12;
+// document.querySelector(".guess").value = 12;
 
 //! Reading the value from the input field:
-console.log(document.querySelector(".guess").value);
+// console.log(document.querySelector(".guess").value);
 // Output: 12
 
 //? .value:
@@ -56,6 +56,7 @@ console.log(document.querySelector(".guess").value);
 
 document.querySelector(".check").addEventListener("click", function () {
   console.log(document.querySelector(".guess").value);
+  document.querySelector(".message").textContent = "🎉 Correct Number!";
 });
 
 //? .addEventListener():
