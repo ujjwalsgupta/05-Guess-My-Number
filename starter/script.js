@@ -2,15 +2,15 @@
 
 //todo: What's the DOM and DOM Manipulation
 
+//! Document Object Model (DOM):
+//* It is a Structured Representation of HTML Documents.
+//* It allows JavaScript to access HTML elements and STYLES to Manipulate them.
+//* It is a connection between JavaScript & HTML.
+
 //? Selecting the textContent inside the Class .message:
 
 console.log(document.querySelector(".message").textContent);
 // Output: Start guessing...
-
-//? Document Object Model (DOM):
-//* It is a Structured Representation of HTML Documents.
-//* It allows JavaScript to access HTML elements and STYLES to Manipulate them.
-//* It is a connection between JavaScript & HTML.
 
 //? DOCUMENT:
 //* Document serves as an entry point for the web page's content, that is DOM tree.
