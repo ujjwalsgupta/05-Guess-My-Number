@@ -25,6 +25,6 @@ console.log(document.querySelector(".message").textContent);
 //? .textContent():
 //* .textContent is used to select all the text inside a selected element.
 
-//! Changing the .textContent inside of the Class "message":
+//! Assigning a new value to the .textContent inside of the Class "message":
 
 document.querySelector(".message").textContent = "🎉 Correct Number!";
