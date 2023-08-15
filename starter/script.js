@@ -29,5 +29,15 @@ console.log(document.querySelector(".message").textContent);
 
 document.querySelector(".message").textContent = "🎉 Correct Number!";
 
-document.querySelector(".number") = 20;
-document.querySelector(".score") = 20;
+document.querySelector(".number").textContent = 13;
+document.querySelector(".score").textContent = 20;
+
+//! Assigning the value to the input field:
+document.querySelector(".guess").value = 12;
+
+//! Reading the value from the input field:
+console.log(document.querySelector(".guess").value);
+// Output: 12
+
+//? .value:
+//* .value property is used to Assign as well as Read the value from the input field.
