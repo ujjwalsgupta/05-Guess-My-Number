@@ -59,6 +59,8 @@ document.querySelector(".check").addEventListener("click", function () {
   document.querySelector(".message").textContent = "🎉 Correct Number!";
 });
 
+// Here, on the click of button, we are logging the input value in the console & changing the textContent of the message.
+
 //? .addEventListener():
 //* .addEventListener() is a method which will be called whenever an event is received.
 
