@@ -27,12 +27,20 @@ document.querySelector(".check").addEventListener("click", function () {
   else if (inputNumber !== randomSecretNumber) {
     //? If Input Number > Random Number
     if (inputNumber > randomSecretNumber) {
-      document.querySelector(".message").textContent = "Your guess is too high";
+      document.querySelector(".message").textContent = "📈 Too high!";
     }
 
     //? If Input Number < Random Number
     else if (inputNumber < randomSecretNumber) {
-      document.querySelector(".message").textContent = "Your guess is too low";
+      document.querySelector(".message").textContent = "📉 Too low!";
     }
   }
+
+  // let i = 1;
+  // while (inputNumber !== randomSecretNumber) {
+  //   const originalScore = (document.querySelector(".score").textContent = 20);
+  //   if (inputNumber !== randomSecretNumber) {
+  //     document.querySelector(".score").textContent = originalScore - i;
+  //   }
+  // }
 });
