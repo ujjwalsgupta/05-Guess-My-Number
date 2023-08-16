@@ -24,10 +24,9 @@ document.querySelector(".check").addEventListener("click", function () {
   else if (inputNumber === randomSecretNumber) {
     document.querySelector(".message").textContent = "🎉 Correct Number!";
 
-    document.querySelector(
+    const highscore = (document.querySelector(
       ".label-highscore"
-    ).textContent = `🥇 Highscore: ${score}`;
-    document.querySelector(".");
+    ).textContent = `🥇 Highscore: ${score}`);
 
     document.querySelector("body").style.backgroundColor = "#60b347";
   }
