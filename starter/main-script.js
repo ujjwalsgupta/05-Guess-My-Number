@@ -23,10 +23,13 @@ document.querySelector(".check").addEventListener("click", function () {
   //todo: CASE 2) When Player's Input Number is equals to the Random Number. (Player Wins)
   else if (inputNumber === randomSecretNumber) {
     document.querySelector(".message").textContent = "🎉 Correct Number!";
+
     const highscore = (document.querySelector(
       ".label-highscore"
     ).textContent = `🥇 Highscore: ${score}`);
     document.querySelector(".");
+
+    document.querySelector("body").style.backgroundColor = "#60b347";
   }
 
   //todo: CASE 3) When Player's Input Number is NOT equals to the Random Number. (Player Loses)
