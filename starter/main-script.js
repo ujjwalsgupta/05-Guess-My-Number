@@ -13,33 +13,34 @@ document.querySelector(".check").addEventListener("click", function () {
   const inputNumber = Number(document.querySelector(".guess").value);
   console.log(inputNumber, typeof inputNumber);
 
-  //todo: CASE 1) No presence of Input Number
+  //todo: CASE 1) When there is No Input Number but still the "Check" button is clicked.
   if (!inputNumber) {
     // inputNumber if nothing is inputted = 0 in console (0 is a falsy value).
     // Now in if-else, number -> boolean, inputNumber is falsy, in order to let "if statement" work, inputNumber should be truthy, so !inputNumber.
     document.querySelector(".message").textContent = "⛔ No Number";
   }
 
-  //todo: CASE 2) Presence of Input Number & Equal to Random Number
+  //todo: CASE 2) When Player's Input Number is equals to the Random Number. (Player Wins)
   else if (inputNumber === randomSecretNumber) {
     document.querySelector(".message").textContent = "🎉 Correct Number!";
     const highscore = (document.querySelector(
       ".label-highscore"
     ).textContent = `🥇 Highscore: ${score}`);
+    document.querySelector(".");
   }
 
-  //todo: CASE 2) Presence of Input Number & Not Equal to Random Number
+  //todo: CASE 3) When Player's Input Number is NOT equals to the Random Number. (Player Loses)
   else if (inputNumber !== randomSecretNumber) {
     if (score > 1) {
       score--;
       document.querySelector(".score").textContent = score;
 
-      //? If Input Number > Random Number
+      //? SUBCASE 1) When Player's Input Number is too higher than Random Number.
       if (inputNumber > randomSecretNumber) {
         document.querySelector(".message").textContent = "📈 Too high!";
       }
 
-      //? If Input Number < Random Number
+      //? SUBCASE 2) When Player's Input Number is too lower than Random Number.
       else if (inputNumber < randomSecretNumber) {
         document.querySelector(".message").textContent = "📉 Too low!";
       }
