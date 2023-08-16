@@ -23,9 +23,9 @@ document.querySelector(".check").addEventListener("click", function () {
   //todo: CASE 2) Presence of Input Number & Equal to Random Number
   else if (inputNumber === randomSecretNumber) {
     document.querySelector(".message").textContent = "🎉 Correct Number!";
-    document.querySelector(
+    const highscore = (document.querySelector(
       ".label-highscore"
-    ).textContent = `🥇 Highscore: ${score}`;
+    ).textContent = `🥇 Highscore: ${score}`);
   }
 
   //todo: CASE 2) Presence of Input Number & Not Equal to Random Number
@@ -48,12 +48,4 @@ document.querySelector(".check").addEventListener("click", function () {
       document.querySelector(".score").textContent = 0;
     }
   }
-
-  // let i = 1;
-  // while (inputNumber !== randomSecretNumber) {
-  //   const originalScore = (document.querySelector(".score").textContent = 20);
-  //   if (inputNumber !== randomSecretNumber) {
-  //     document.querySelector(".score").textContent = originalScore - i;
-  //   }
-  // }
 });
