@@ -5,6 +5,8 @@
 const randomSecretNumber = Math.trunc(Math.random() * 20) + 1;
 document.querySelector(".number").textContent = randomSecretNumber;
 
+let score = 20;
+
 //* Clicking of Check Button & Input Number Storage
 
 document.querySelector(".check").addEventListener("click", function () {
@@ -21,10 +23,16 @@ document.querySelector(".check").addEventListener("click", function () {
   //todo: CASE 2) Presence of Input Number & Equal to Random Number
   else if (inputNumber === randomSecretNumber) {
     document.querySelector(".message").textContent = "🎉 Correct Number!";
+    document.querySelector(
+      ".label-highscore"
+    ).textContent = `🥇 Highscore: ${score}`;
   }
 
   //todo: CASE 2) Presence of Input Number & Not Equal to Random Number
   else if (inputNumber !== randomSecretNumber) {
+    score--;
+    document.querySelector(".score").textContent = score;
+
     //? If Input Number > Random Number
     if (inputNumber > randomSecretNumber) {
       document.querySelector(".message").textContent = "📈 Too high!";
