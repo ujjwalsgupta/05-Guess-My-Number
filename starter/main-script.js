@@ -30,17 +30,22 @@ document.querySelector(".check").addEventListener("click", function () {
 
   //todo: CASE 2) Presence of Input Number & Not Equal to Random Number
   else if (inputNumber !== randomSecretNumber) {
-    score--;
-    document.querySelector(".score").textContent = score;
+    if (score > 1) {
+      score--;
+      document.querySelector(".score").textContent = score;
 
-    //? If Input Number > Random Number
-    if (inputNumber > randomSecretNumber) {
-      document.querySelector(".message").textContent = "📈 Too high!";
-    }
+      //? If Input Number > Random Number
+      if (inputNumber > randomSecretNumber) {
+        document.querySelector(".message").textContent = "📈 Too high!";
+      }
 
-    //? If Input Number < Random Number
-    else if (inputNumber < randomSecretNumber) {
-      document.querySelector(".message").textContent = "📉 Too low!";
+      //? If Input Number < Random Number
+      else if (inputNumber < randomSecretNumber) {
+        document.querySelector(".message").textContent = "📉 Too low!";
+      }
+    } else {
+      document.querySelector(".message").textContent = "💥 You lost the game!";
+      document.querySelector(".score").textContent = 0;
     }
   }
 
