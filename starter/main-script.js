@@ -29,6 +29,7 @@ document.querySelector(".check").addEventListener("click", function () {
     ).textContent = `🥇 Highscore: ${score}`);
 
     document.querySelector("body").style.backgroundColor = "#60b347";
+    document.querySelector(".number").style.width = "30rem";
   }
 
   //todo: CASE 3) When Player's Input Number is NOT equals to the Random Number. (Player Loses)

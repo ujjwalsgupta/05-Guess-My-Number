@@ -75,3 +75,15 @@ document.querySelector(".check").addEventListener("click", function () {
 
 //! NOTE: There is no need to call the Anonymous function inside the .addEventListener(), JS calls that function as soon as the event happens.
 //! i.e., in this case, it is the click of the button.
+
+// --------------------------------------------------------------------
+
+//todo: Manipulating CSS Styles
+
+//? document.querySelector("Element Selector / Class Selector / ID Selector").style.cssProperty = "value";
+
+//* .style after selecting the element to select the properties of their css.
+
+//* .cssProperty after selecting the .style object to select the properties of the selector.
+//! NOTE: the property name should always be written in CamelCaseConvention, So convert the css property name to camelCasing.
+//! The value of the css property should always be written inside the double quotes.
