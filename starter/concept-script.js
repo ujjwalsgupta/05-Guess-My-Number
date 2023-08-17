@@ -86,4 +86,6 @@ document.querySelector(".check").addEventListener("click", function () {
 
 //* .cssProperty after selecting the .style object to select the properties of the selector.
 //! NOTE: the property name should always be written in CamelCaseConvention, So convert the css property name to camelCasing.
-//! The value of the css property should always be written inside the double quotes.
+//! The value of the css property should always be written as a string (inside the double quotes).
+
+//todo: IMPORTANT NOTE: While doing css changes through DOM, The DOM affects the HTML through the Inline CSS properties. This means the CSS file is untouched from the changes done in .styles inside DOM.

@@ -2,8 +2,7 @@
 
 //* Random Input Number Generator (Between 1 - 20)
 
-const randomSecretNumber = Math.trunc(Math.random() * 20) + 1;
-document.querySelector(".number").textContent = randomSecretNumber;
+let randomSecretNumber = Math.trunc(Math.random() * 20) + 1;
 
 let score = 20;
 
@@ -24,12 +23,30 @@ document.querySelector(".check").addEventListener("click", function () {
   else if (inputNumber === randomSecretNumber) {
     document.querySelector(".message").textContent = "🎉 Correct Number!";
 
-    const highscore = (document.querySelector(
-      ".label-highscore"
-    ).textContent = `🥇 Highscore: ${score}`);
+    // const highScore = (document.querySelector(
+    //   ".label-highscore"
+    // ).textContent = `🥇 Highscore: ${score}`);
+
+    let highScore = 0;
+
+    if (score > highScore) {
+      document.querySelector(
+        ".label-highscore"
+      ).textContent = `🥇 Highscore: ${score}`;
+    } else if (score === highScore) {
+      document.querySelector(
+        ".label-highscore"
+      ).textContent = `🥇 Highscore: ${score}`;
+    } else {
+      document.querySelector(
+        ".label-highscore"
+      ).textContent = `🥇 Highscore: ${highScore}`;
+    }
 
     document.querySelector("body").style.backgroundColor = "#60b347";
     document.querySelector(".number").style.width = "30rem";
+
+    document.querySelector(".number").textContent = randomSecretNumber;
   }
 
   //todo: CASE 3) When Player's Input Number is NOT equals to the Random Number. (Player Loses)
@@ -52,4 +69,15 @@ document.querySelector(".check").addEventListener("click", function () {
       document.querySelector(".score").textContent = 0;
     }
   }
+});
+
+document.querySelector(".again").addEventListener("click", function () {
+  document.querySelector(".score").textContent = 0;
+  score = 20;
+  document.querySelector(".guess").value = " ";
+  document.querySelector(".message").textContent = "Start guessing...";
+  document.querySelector("body").style.backgroundColor = "#222";
+  document.querySelector(".number").textContent = "?";
+  randomSecretNumber = Math.trunc(Math.random() * 20) + 1;
+  document.querySelector(".label-highscore").textContent = `${highScore}`;
 });
