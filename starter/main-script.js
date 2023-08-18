@@ -30,11 +30,7 @@ document.querySelector(".check").addEventListener("click", function () {
 
     if (score > highScore) {
       highScore = score;
-      document.querySelector(".highscore").textContent = score;
-    } else if (score === highScore) {
-      document.querySelector(".label-highscore").textContent = score;
-    } else {
-      document.querySelector(".label-highscore").textContent = highScore;
+      document.querySelector(".highscore").textContent = highScore;
     }
 
     document.querySelector("body").style.backgroundColor = "#60b347";
@@ -73,6 +69,5 @@ document.querySelector(".again").addEventListener("click", function () {
   document.querySelector("body").style.backgroundColor = "#222";
   document.querySelector(".number").textContent = "?";
   randomSecretNumber = Math.trunc(Math.random() * 20) + 1;
-  document.querySelector(".highscore").textContent = highScore;
   document.querySelector(".number").style.width = "15rem";
 });
