@@ -11,6 +11,10 @@ const hiddenNumberWidth = function (width) {
   document.querySelector(".number").style.width = width;
 };
 
+const displayScore = function () {
+  document.querySelector(".score");
+};
+
 //* Random Input Number Generator (Between 1 - 20)
 
 let randomSecretNumber = Math.trunc(Math.random() * 20) + 1;
@@ -43,7 +47,7 @@ document.querySelector(".check").addEventListener("click", function () {
 
     document.querySelector("body").style.backgroundColor = "#60b347";
     hiddenNumberWidth("30rem");
-    document.querySelector(".number").textContent = randomSecretNumber;
+    hiddenNumberWidth(randomSecretNumber);
   }
 
   //todo: CASE 3) When Player's Input Number is NOT equals to the Random Number. (Player Loses)
