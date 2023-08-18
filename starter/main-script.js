@@ -72,7 +72,7 @@ document.querySelector(".check").addEventListener("click", function () {
 });
 
 document.querySelector(".again").addEventListener("click", function () {
-  document.querySelector(".score").textContent = 0;
+  document.querySelector(".score").textContent = 20;
   score = 20;
   document.querySelector(".guess").value = " ";
   document.querySelector(".message").textContent = "Start guessing...";
