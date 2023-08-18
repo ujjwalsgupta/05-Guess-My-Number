@@ -46,14 +46,18 @@ document.querySelector(".check").addEventListener("click", function () {
       document.querySelector(".score").textContent = score;
 
       //? SUBCASE 1) When Player's Input Number is too higher than Random Number.
-      if (inputNumber > randomSecretNumber) {
-        document.querySelector(".message").textContent = "📈 Too high!";
-      }
+      // if (inputNumber > randomSecretNumber) {
+      //   document.querySelector(".message").textContent = "📈 Too high!";
+      // }
 
       //? SUBCASE 2) When Player's Input Number is too lower than Random Number.
-      else if (inputNumber < randomSecretNumber) {
-        document.querySelector(".message").textContent = "📉 Too low!";
-      }
+      // else if (inputNumber < randomSecretNumber) {
+      //   document.querySelector(".message").textContent = "📉 Too low!";
+      // }
+
+      //? By using ternary operator
+      document.querySelector(".message").textContent =
+        inputNumber > randomSecretNumber ? "📈 Too high!" : "📉 Too low!";
     } else {
       document.querySelector(".message").textContent = "💥 You lost the game!";
       document.querySelector(".score").textContent = 0;
