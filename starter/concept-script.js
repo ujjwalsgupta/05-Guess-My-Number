@@ -90,3 +90,9 @@ document.querySelector(".check").addEventListener("click", function () {
 //! The value of the css property should always be written as a string (inside the double quotes).
 
 //todo: IMPORTANT NOTE: While doing css changes through DOM, The DOM affects the HTML through the Inline CSS properties. This means the CSS file is untouched from the changes done in .styles inside DOM.
+
+// --------------------------------------------------------------------
+
+//todo: Refactoring Our Code: The DRY Principle
+
+//? We can refactor our code by relacing the repetitive DOM code with performing same tasks by assigning them a function
