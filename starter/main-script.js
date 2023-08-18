@@ -3,6 +3,8 @@
 let score = 20;
 let highScore = 0;
 
+//* Short-hand Functions
+
 const displayMessage = function (message) {
   document.querySelector(".message").textContent = message;
 };
@@ -11,8 +13,12 @@ const hiddenNumberWidth = function (width) {
   document.querySelector(".number").style.width = width;
 };
 
-const displayScore = function () {
-  document.querySelector(".score");
+const displayScore = function (text) {
+  document.querySelector(".score").textContent = text;
+};
+
+const bgColor = function (bg) {
+  document.querySelector("body").style.backgroundColor = bg;
 };
 
 //* Random Input Number Generator (Between 1 - 20)
@@ -44,8 +50,7 @@ document.querySelector(".check").addEventListener("click", function () {
       highScore = score;
       document.querySelector(".highscore").textContent = highScore;
     }
-
-    document.querySelector("body").style.backgroundColor = "#60b347";
+    bgColor("#60b347");
     hiddenNumberWidth("30rem");
     hiddenNumberWidth(randomSecretNumber);
   }
@@ -54,7 +59,7 @@ document.querySelector(".check").addEventListener("click", function () {
   else if (inputNumber !== randomSecretNumber) {
     if (score > 1) {
       score--;
-      document.querySelector(".score").textContent = score;
+      displayScore(score);
 
       //? SUBCASE 1) When Player's Input Number is too higher than Random Number.
       // if (inputNumber > randomSecretNumber) {
@@ -72,18 +77,18 @@ document.querySelector(".check").addEventListener("click", function () {
       );
     } else {
       displayMessage("💥 You lost the game!");
-      document.querySelector(".score").textContent = 0;
+      displayScore(0);
     }
   }
 });
 
 document.querySelector(".again").addEventListener("click", function () {
-  document.querySelector(".score").textContent = 20;
   score = 20;
-  document.querySelector(".guess").value = "";
+  displayScore(20);
+  hiddenNumberWidth("15rem");
   displayMessage("Start guessing...");
-  document.querySelector("body").style.backgroundColor = "#222";
+  bgColor("#222");
+  document.querySelector(".guess").value = "";
   document.querySelector(".number").textContent = "?";
   randomSecretNumber = Math.trunc(Math.random() * 20) + 1;
-  hiddenNumberWidth("15rem");
 });
