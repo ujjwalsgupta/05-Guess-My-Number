@@ -80,4 +80,5 @@ document.querySelector(".again").addEventListener("click", function () {
   document.querySelector(".number").textContent = "?";
   randomSecretNumber = Math.trunc(Math.random() * 20) + 1;
   document.querySelector(".label-highscore").textContent = `${highScore}`;
+  document.querySelector(".number").style.width = "15rem";
 });
