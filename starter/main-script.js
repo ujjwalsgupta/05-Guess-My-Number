@@ -5,6 +5,7 @@
 let randomSecretNumber = Math.trunc(Math.random() * 20) + 1;
 
 let score = 20;
+let highScore = 0;
 
 //* Clicking of Check Button & Input Number Storage
 
@@ -27,20 +28,13 @@ document.querySelector(".check").addEventListener("click", function () {
     //   ".label-highscore"
     // ).textContent = `🥇 Highscore: ${score}`);
 
-    let highScore = 0;
-
     if (score > highScore) {
-      document.querySelector(
-        ".label-highscore"
-      ).textContent = `🥇 Highscore: ${score}`;
+      highScore = score;
+      document.querySelector(".highscore").textContent = score;
     } else if (score === highScore) {
-      document.querySelector(
-        ".label-highscore"
-      ).textContent = `🥇 Highscore: ${score}`;
+      document.querySelector(".label-highscore").textContent = score;
     } else {
-      document.querySelector(
-        ".label-highscore"
-      ).textContent = `🥇 Highscore: ${highScore}`;
+      document.querySelector(".label-highscore").textContent = highScore;
     }
 
     document.querySelector("body").style.backgroundColor = "#60b347";
@@ -79,6 +73,6 @@ document.querySelector(".again").addEventListener("click", function () {
   document.querySelector("body").style.backgroundColor = "#222";
   document.querySelector(".number").textContent = "?";
   randomSecretNumber = Math.trunc(Math.random() * 20) + 1;
-  document.querySelector(".label-highscore").textContent = `${highScore}`;
+  document.querySelector(".highscore").textContent = highScore;
   document.querySelector(".number").style.width = "15rem";
 });
