@@ -67,11 +67,12 @@ document.querySelector(".check").addEventListener("click", function () {
 //? Inside .addEventListener(),
 //* -> There are 2 arguments that needs to passed,
 //* 1) Name/Type (Event Name) of the Event.
-//* 2) The function (Event Handler) performing the task related to that Name/Type of the Event.
+// Here, 'click' event listener is responsible for performing some actions via function on a mouse click on a certain selected element.
+//* 2) The function (Anonymous Event Handler) performing the task related to that Name/Type of the Event.
 // (What reaction that eventListener should do on clicking this event is done by this anonymous function).
 
 //? Syntax:
-// .addeventListener("EventName", "EventHandler" (Anonymous function))
+// .addeventListener("EventName/Type", "EventHandler" (Anonymous function))
 
 //! NOTE: There is no need to call the Anonymous function inside the .addEventListener(), JS calls that function as soon as the event happens.
 //! i.e., in this case, it is the click of the button.
