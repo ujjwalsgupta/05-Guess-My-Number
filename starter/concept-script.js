@@ -96,3 +96,21 @@ document.querySelector(".check").addEventListener("click", function () {
 //todo: Refactoring Our Code: The DRY Principle
 
 //? We can refactor our code by relacing the repetitive DOM code with performing same tasks by assigning them a function
+
+// For Example:
+//* This DOM is written so many times in our code but with a different value each time, so in order to refactor our code, we need to assign it to a function
+
+document.querySelector(".message").textContent = "🎉 Correct Number!";
+
+document.querySelector(".message").textContent = "⛔ No Number";
+
+// Solution:
+
+const displayMessage = function (message) {
+  document.querySelector(".message").textContent = message;
+};
+
+displayMessage("🎉 Correct Number!");
+displayMessage("⛔ No Number");
+
+//? By writing this way (calling the function with parameters), we can avoid large blocks of code as well as this helps in increasing the readibility of our code.
